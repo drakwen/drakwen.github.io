@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Fantasy Generator</title>
+</head>
+<body>
+  <h1>Random Name, Place, and Mission Generator</h1>
+  <button onclick="generateRandomData()">Generate Random Data</button>
+  <p id="randomData"></p>
+
+  <script>
+    function generateRandomData() {
+      const names = ["John", "Jane", "Alice", "Bob", "Eva"];
+      const places = ["Paris", "New York", "Tokyo", "London", "Sydney"];
+      const missions = ["Explore a new world", "Solve a mystery", "Save the planet", "Discover hidden treasures", "Complete a top-secret mission"];
+
+      const randomName = names[Math.floor(Math.random() * names.length)];
+      const randomPlace = places[Math.floor(Math.random() * places.length)];
+      const randomMission = missions[Math.floor(Math.random() * missions.length)];
+
+      const randomData = `${randomName} is in ${randomPlace} on a mission to: "${randomMission}"`;
+      document.getElementById("randomData").textContent = randomData;
+    }
+  </script>
+</body>
+</html>
